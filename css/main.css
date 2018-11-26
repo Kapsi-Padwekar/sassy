@@ -133,4 +133,71 @@ main section#primary a {
     padding: 15px 60px;
   }
 }
+
+/* Styling for Custom Radio Button */
+/* The container */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.radioContainer:hover {
+  color: #00adef;
+}
+
+.radioContainer:hover input ~ .checkmark {
+  border: 1px solid #00adef;
+  display: inline-block;
+}
+
+.radioContainer input:checked ~ .checkmark {
+  background-color: #00adef;
+  border: 1px solid #00adef;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radioContainer input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+
+.radioContainer .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
 /*# sourceMappingURL=main.css.map */
