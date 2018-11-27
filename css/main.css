@@ -247,4 +247,81 @@ main section#primary a {
 .radioContainerIL input:checked + label {
   color: #00adef;
 }
+
+/* checkbox container */
+.checkboxContainerIL {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainerIL input[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  bottom: 3px;
+}
+
+.checkboxContainerIL:hover {
+  color: #00adef;
+}
+
+.checkboxContainerIL:hover input[type="checkbox"] {
+  border: 1px solid #00adef;
+  display: inline-block;
+}
+
+.checkboxContainerIL input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainerIL input[type="checkbox"]:checked {
+  background-color: #00adef;
+  border: 1px solid #00adef;
+}
+
+.checkboxContainerIL input[type="checkbox"]:checked::after {
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 12px;
+  display: block;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+
+.checkboxContainerIL label {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+.checkboxContainerIL input[type="checkbox"]:checked + label {
+  color: #00adef;
+}
+
+.checkboxContainerIL input[type="checkbox"]:disabled {
+  background-color: #ccc;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.checkboxContainerIL input[type="checkbox"]:disabled + label {
+  color: #999;
+  cursor: not-allowed;
+}
 /*# sourceMappingURL=main.css.map */
