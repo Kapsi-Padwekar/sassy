@@ -210,4 +210,46 @@ main {
       background-color: #fff;
     }
   }
+
+  /* The container */
+
+.radioContainerIL {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+      position: relative;
+      -webkit-appearance: none;
+      cursor: pointer;
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+      bottom: 3px;
+    }
+    &:hover {
+      input {
+        border: 1px solid #00adef;
+        display: inline-block;
+      }
+      color: #00adef;
+    }
+    input:checked {
+      border: 5px solid #00adef;
+      border-radius: 50%;
+    }
+    label {
+      vertical-align: middle;
+    }
+    input:checked + label {
+      color: #00adef;
+    }
+  }
   
